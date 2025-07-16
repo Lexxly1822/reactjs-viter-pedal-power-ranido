@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react";
 
-const CardFeaturesRoad = () => {
+const CardFeaturesRoad = ({ title, miles, level, ft, img }) => {
   return (
     <>
       <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition">
@@ -13,16 +13,16 @@ const CardFeaturesRoad = () => {
           <h3 className="text-xl font-bold mb-2">{title}</h3>
           <div className="grid grid-cols-2 gap-2 mb-4">
             <div>
-              <p className="text-sm text-gray-500">{distance}</p>
-              <p className="font-medium">75 miles</p>
+              <p className="text-sm text-gray-500">distance</p>
+              <p className="font-medium">{miles}</p>
             </div>
             <div>
               <p className="text-sm text-gray-500">Difficulty</p>
-              <p className="font-medium">Intermediate</p>
+              <p className="font-medium">{level}</p>
             </div>
             <div>
               <p className="text-sm text-gray-500">Elevation</p>
-              <p className="font-medium">1,200 ft</p>
+              <p className="font-medium">{ft}</p>
             </div>
           </div>
           <button className="w-full bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg transition">
@@ -32,6 +32,6 @@ const CardFeaturesRoad = () => {
       </div>
     </>
   );
-}
+};
 
-export default CardFeaturesRoad
+export default CardFeaturesRoad;

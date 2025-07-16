@@ -1,6 +1,9 @@
-import React from 'react'
-import Footer from '../../partials/Footer';
-import Header from '../../partials/Header';
+import React from "react";
+import Footer from "../../partials/Footer";
+import Header from "../../partials/Header";
+import CardFeaturesRoad from "../../partials/CardFeaturesRoad";
+import CardGear from "../../partials/CardGear";
+import CardTrainingTips from "../../partials/CardTrainingTips";
 
 const RoadBiking = () => {
   return (
@@ -41,96 +44,27 @@ const RoadBiking = () => {
                 </div>
 
                 <div className="grid md:grid-cols-3 gap-8">
-                  {/* Route 1 */}
-                  <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition">
-                    <img
-                      src="https://images.unsplash.com/photo-1531045535792-b515d59c3d1f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
-                      alt="Coastal Highway"
-                      className="w-full h-48 object-cover"
-                    />
-                    <div className="p-6">
-                      <h3 className="text-xl font-bold mb-2">
-                        Coastal Highway
-                      </h3>
-                      <div className="grid grid-cols-2 gap-2 mb-4">
-                        <div>
-                          <p className="text-sm text-gray-500">Distance</p>
-                          <p className="font-medium">75 miles</p>
-                        </div>
-                        <div>
-                          <p className="text-sm text-gray-500">Difficulty</p>
-                          <p className="font-medium">Intermediate</p>
-                        </div>
-                        <div>
-                          <p className="text-sm text-gray-500">Elevation</p>
-                          <p className="font-medium">1,200 ft</p>
-                        </div>
-                      </div>
-                      <button className="w-full bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg transition">
-                        View Route
-                      </button>
-                    </div>
-                  </div>
-
-                  {/* Route 2 */}
-                  <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition">
-                    <img
-                      src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
-                      alt="Mountain Pass"
-                      className="w-full h-48 object-cover"
-                    />
-                    <div className="p-6">
-                      <h3 className="text-xl font-bold mb-2">Mountain Pass</h3>
-                      <div className="grid grid-cols-2 gap-2 mb-4">
-                        <div>
-                          <p className="text-sm text-gray-500">Distance</p>
-                          <p className="font-medium">42 miles</p>
-                        </div>
-                        <div>
-                          <p className="text-sm text-gray-500">Difficulty</p>
-                          <p className="font-medium">Advanced</p>
-                        </div>
-                        <div>
-                          <p className="text-sm text-gray-500">Elevation</p>
-                          <p className="font-medium">5,800 ft</p>
-                        </div>
-                      </div>
-                      <button className="w-full bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg transition">
-                        View Route
-                      </button>
-                    </div>
-                  </div>
-
-                  {/* Route 3 */}
-                  <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition">
-                    <img
-                      src="https://images.unsplash.com/photo-1511994298241-608e28f14fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
-                      alt="Countryside Loop"
-                      className="w-full h-48 object-cover"
-                    />
-                    <div className="p-6">
-                      <h3 className="text-xl font-bold mb-2">
-                        Countryside Loop
-                      </h3>
-                      <div className="grid grid-cols-2 gap-2 mb-4">
-                        <div>
-                          <p className="text-sm text-gray-500">Distance</p>
-                          <p className="font-medium">30 miles</p>
-                        </div>
-                        <div>
-                          <p className="text-sm text-gray-500">Difficulty</p>
-                          <p className="font-medium">Beginner</p>
-                        </div>
-                        <div>
-                          <p className="text-sm text-gray-500">Elevation</p>
-                          <p className="font-medium">500 ft</p>
-                        </div>
-                      </div>
-                      <button className="w-full bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg transition">
-                        View Route
-                      </button>
-                    </div>
-                  </div>
+                  <CardFeaturesRoad
+                    img={"/img/roadbiking1.webp "}
+                    title={" Coastal Highway "}
+                    miles={" 75 miles"}
+                    level={"Intermediate "}
+                    ft={"1,200 ft "}
+                  />
+                  <CardFeaturesRoad
+                    img={"img/roadbiking2.webp"}
+                    title={" Mountain Pass "}
+                    miles={" 42 miles"}
+                    level={"Advanced "}
+                    ft={"5,800 ft "}
+                  />
+                  <CardFeaturesRoad
+                    img={"img/roadbiking3.webp "}
+                    title={" Countryside Loop "}
+                    miles={"30 miles "}
+                    level={"Beginner "}
+                    ft={"500 ft "}
+                  />
                 </div>
               </div>
 
@@ -149,91 +83,13 @@ const RoadBiking = () => {
                       View Full Gear Guide
                     </button>
                   </div>
+
                   <div className="md:w-1/2">
                     <div className="grid grid-cols-2 gap-4">
-                      {/* Gear Item 1 */}
-                      <div className="bg-white p-4 rounded-lg shadow text-center">
-                        <div className="h-16 mb-2 flex items-center justify-center">
-                          <svg
-                            className="w-10 h-10 text-green-600"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={1.5}
-                              d="M5 13l4 4L19 7"
-                            />
-                          </svg>
-                        </div>
-                        <p className="font-medium">Helmet</p>
-                      </div>
-
-                      {/* Gear Item 2 */}
-                      <div className="bg-white p-4 rounded-lg shadow text-center">
-                        <div className="h-16 mb-2 flex items-center justify-center">
-                          <svg
-                            className="w-10 h-10 text-green-600"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={1.5}
-                              d="M5 13l4 4L19 7"
-                            />
-                          </svg>
-                        </div>
-                        <p className="font-medium">Bike Shoes</p>
-                      </div>
-
-                      {/* Gear Item 3 */}
-                      <div className="bg-white p-4 rounded-lg shadow text-center">
-                        <div className="h-16 mb-2 flex items-center justify-center">
-                          <svg
-                            className="w-10 h-10 text-green-600"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={1.5}
-                              d="M5 13l4 4L19 7"
-                            />
-                          </svg>
-                        </div>
-                        <p className="font-medium">Jersey</p>
-                      </div>
-
-                      {/* Gear Item 4 */}
-                      <div className="bg-white p-4 rounded-lg shadow text-center">
-                        <div className="h-16 mb-2 flex items-center justify-center">
-                          <svg
-                            className="w-10 h-10 text-green-600"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={1.5}
-                              d="M5 13l4 4L19 7"
-                            />
-                          </svg>
-                        </div>
-                        <p className="font-medium">Bottles</p>
-                      </div>
+                      <CardGear title={"Helmet "} />
+                      <CardGear title={"Bike Shoes"} />
+                      <CardGear title={"Jersey"} />
+                      <CardGear title={"Bottles "} />
                     </div>
                   </div>
                 </div>
@@ -249,55 +105,35 @@ const RoadBiking = () => {
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-8">
-                  {/* Tip 1 */}
-                  <div className="bg-white p-8 rounded-xl shadow-lg">
-                    <div className="text-green-600 text-4xl font-bold mb-4">
-                      01
-                    </div>
-                    <h3 className="text-xl font-bold mb-3">Cadence Matters</h3>
-                    <p className="text-gray-600">
-                      Aim for a cadence of 80-100 RPM to improve efficiency and
-                      reduce fatigue. Use your gears to maintain this range on
-                      different terrain.
-                    </p>
-                  </div>
+                  <CardTrainingTips
+                    number={"01"}
+                    title={"Cadence Matters "}
+                    description={
+                      " Aim for a cadence of 80-100 RPM to improve efficiency and reduce fatigue. Use your gears to maintain this range on different terrain"
+                    }
+                  />
+                  <CardTrainingTips
+                    number={"02"}
+                    title={"Fuel Properly "}
+                    description={
+                      " Consume 30-60g of carbohydrates per hour on rides longer than 90 minutes to maintain energy levels."
+                    }
+                  />
 
-                  {/* Tip 2 */}
-                  <div className="bg-white p-8 rounded-xl shadow-lg">
-                    <div className="text-green-600 text-4xl font-bold mb-4">
-                      02
-                    </div>
-                    <h3 className="text-xl font-bold mb-3">Fuel Properly</h3>
-                    <p className="text-gray-600">
-                      Consume 30-60g of carbohydrates per hour on rides longer
-                      than 90 minutes to maintain energy levels.
-                    </p>
-                  </div>
-
-                  {/* Tip 3 */}
-                  <div className="bg-white p-8 rounded-xl shadow-lg">
-                    <div className="text-green-600 text-4xl font-bold mb-4">
-                      03
-                    </div>
-                    <h3 className="text-xl font-bold mb-3">Group Riding</h3>
-                    <p className="text-gray-600">
-                      When drafting, maintain a consistent speed and avoid
-                      sudden braking. Communicate clearly with hand signals and
-                      verbal calls.
-                    </p>
-                  </div>
-
-                  {/* Tip 4 */}
-                  <div className="bg-white p-8 rounded-xl shadow-lg">
-                    <div className="text-green-600 text-4xl font-bold mb-4">
-                      04
-                    </div>
-                    <h3 className="text-xl font-bold mb-3">Hill Climbing</h3>
-                    <p className="text-gray-600">
-                      Shift before you need to, stay seated on moderate grades,
-                      and focus on steady breathing and pedal strokes.
-                    </p>
-                  </div>
+                  <CardTrainingTips
+                    number={"03"}
+                    title={"Group Riding"}
+                    description={
+                      " When drafting, maintain a consistent speed and avoid sudden braking. Communicate clearly with hand signals and verbal calls."
+                    }
+                  />
+                  <CardTrainingTips
+                    number={"04"}
+                    title={"Hill Climbing"}
+                    description={
+                      "Shift before you need to, stay seated on moderate grades, and focus on steady breathing and pedal strokes."
+                    }
+                  />
                 </div>
               </div>
             </div>
@@ -307,6 +143,6 @@ const RoadBiking = () => {
       </div>
     </>
   );
-}
+};
 
-export default RoadBiking
+export default RoadBiking;
